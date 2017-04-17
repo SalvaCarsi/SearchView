@@ -32,9 +32,7 @@ export class ShapesForm extends Component {
           Buscador de preguntas
         </TextWrapper>
 
-        <form>
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </form>
+        <input type="text" value={this.state.value} onChange={this.handleChange} />
 
       </SearchBarWrapper>
     );
