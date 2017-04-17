@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 
 import SearchBarWrapper from '../../components/styled/SearchBarWrapper';
 import TextWrapper from '../../components/styled/TextWrapper';
+import Button from '../../components/styled/Button';
 
 export class ShapesForm extends Component {
 
@@ -33,6 +34,7 @@ export class ShapesForm extends Component {
         </TextWrapper>
 
         <input type="text" value={this.state.value} onChange={this.handleChange} />
+        <Button>Buscar</Button>
 
       </SearchBarWrapper>
     );
