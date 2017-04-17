@@ -5,9 +5,9 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import { composeWithDevTools } from 'remote-redux-devtools';
 
-import ShapesHeader from './containers/ShapesHeader';
-import ShapesForm from './containers/shapes-form/ShapesForm';
-import shapeReducer from './containers/shapes-form/reducer';
+import searchBarReducer from './containers/search-bar/reducer';
+import SearchBar from './containers/search-bar/SearchBar';
+
 import BodyWrapper from './components/styled/BodyWrapper';
 
 /**
@@ -21,7 +21,7 @@ function configureStore() {
     port: 8000 ,
     hostname: 'localhost'
   });
-  const appReducers = combineReducers({shapeReducer});
+  const appReducers = combineReducers({searchBarReducer});
   return createStore(
     appReducers,
     composeEnhancers()
@@ -34,8 +34,7 @@ export default class App extends Component {
     return (
       <Provider store={configureStore()}>
         <BodyWrapper>
-          <ShapesHeader />
-          <ShapesForm />
+          <SearchBar />
         </BodyWrapper>
       </Provider>
     );
