@@ -1,8 +1,10 @@
 'use strict';
 
-function searchBarReducer(state = {searchText: ''}, action) {
+function searchBarReducer(state = {results: ''}, action) {
+  console.log(`action type ${action.type}`);
   switch (action.type) {
-    default: return state
+    case 'SEARCH_RESPONSE': return action.payload;
+    default: return state;
   }
 }
 

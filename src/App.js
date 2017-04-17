@@ -2,19 +2,15 @@
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { composeWithDevTools } from 'remote-redux-devtools';
+import thunk from 'redux-thunk';
 
 import searchBarReducer from './containers/search-bar/reducer';
 import SearchBar from './containers/search-bar/SearchBar';
 
 import BodyWrapper from './components/styled/BodyWrapper';
 
-/**
- * First configure the connection with the dev tools server
- * Then combines the reducers
- * @returns {Store<S>}
- */
 function configureStore() {
   const composeEnhancers = composeWithDevTools({
     realtime: true,
@@ -24,7 +20,7 @@ function configureStore() {
   const appReducers = combineReducers({searchBarReducer});
   return createStore(
     appReducers,
-    composeEnhancers()
+    composeEnhancers(applyMiddleware(thunk))
   )
 }
 

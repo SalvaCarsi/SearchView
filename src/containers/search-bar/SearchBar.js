@@ -2,14 +2,16 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
+import { bindActionCreators } from 'redux';
 
 import SearchBarWrapper from '../../components/styled/SearchBarWrapper';
 import TextWrapper from '../../components/styled/TextWrapper';
 import Button from '../../components/styled/Button';
 import InputWrapper from '../../components/styled/InputWrapper';
 
-export class ShapesForm extends Component {
+import * as actionsCreator from './actions';
+
+export class SearchBar extends Component {
 
   constructor(props) {
     super(props);
@@ -20,9 +22,8 @@ export class ShapesForm extends Component {
     this.setState({searchText: event.target.value});
   };
 
-  handleSubmit = (event) => {
-    alert('A name was submitted: ' + this.state.searchText);
-    event.preventDefault();
+  handleSubmit = () => {
+    this.props.actions.updateSearchText(this.state.searchText);
   };
 
   render = () => {
@@ -46,5 +47,5 @@ export class ShapesForm extends Component {
 
 // Container
 const mapStateToProps = state => ({searchText: state.searchBarReducer.searchText});
-// const mapDispatchToProps = dispatch => ({actions: bindActionCreators(actionsCreator, dispatch)});
-export default connect(mapStateToProps)(ShapesForm);
+const mapDispatchToProps = dispatch => ({actions: bindActionCreators(actionsCreator, dispatch)});
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
