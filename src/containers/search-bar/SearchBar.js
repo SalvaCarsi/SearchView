@@ -11,6 +11,16 @@ export class ShapesForm extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {searchText: ''};
+  }
+
+  handleChange = (event) => {
+    this.setState({searchText: event.target.value});
+  };
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.searchText);
+    event.preventDefault();
   }
   render = () => {
     return (
@@ -21,6 +31,11 @@ export class ShapesForm extends Component {
           padding={'0.1em 0.1em'}>
           Buscador de preguntas
         </TextWrapper>
+
+        <form>
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </form>
+
       </SearchBarWrapper>
     );
   }
