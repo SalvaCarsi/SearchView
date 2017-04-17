@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 
-import HeaderWrapper from '../../components/styled/HeaderWrapper';
+import SearchBarWrapper from '../../components/styled/SearchBarWrapper';
 import TextWrapper from '../../components/styled/TextWrapper';
 
 export class ShapesForm extends Component {
@@ -14,14 +14,14 @@ export class ShapesForm extends Component {
   }
   render = () => {
     return (
-      <HeaderWrapper>
+      <SearchBarWrapper>
         <TextWrapper
-          size={1.8}
+          size={1}
           fontWeight={'bold'}
           padding={'0.1em 0.1em'}>
-          Search!
+          Buscador de preguntas
         </TextWrapper>
-      </HeaderWrapper>
+      </SearchBarWrapper>
     );
   }
 
