@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import SearchBarWrapper from '../../components/styled/SearchBarWrapper';
 import TextWrapper from '../../components/styled/TextWrapper';
 import Button from '../../components/styled/Button';
+import InputWrapper from '../../components/styled/InputWrapper';
 
 export class ShapesForm extends Component {
 
@@ -19,10 +20,11 @@ export class ShapesForm extends Component {
     this.setState({searchText: event.target.value});
   };
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     alert('A name was submitted: ' + this.state.searchText);
     event.preventDefault();
-  }
+  };
+
   render = () => {
     return (
       <SearchBarWrapper>
@@ -33,8 +35,8 @@ export class ShapesForm extends Component {
           Buscador de preguntas
         </TextWrapper>
 
-        <input type="text" value={this.state.value} onChange={this.handleChange} />
-        <Button>Buscar</Button>
+        <InputWrapper value={this.state.value} onChange={this.handleChange} />
+        <Button onClick={this.handleSubmit}>Buscar</Button>
 
       </SearchBarWrapper>
     );

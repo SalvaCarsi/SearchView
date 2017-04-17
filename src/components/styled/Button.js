@@ -12,7 +12,7 @@ const Button = styled.button`
   box-sizing: border-box;
   margin: auto 0.2em;
   width: 70px;
-  height: 21px;
+  height: 24px;
   cursor: pointer;
   outline: 0;
   border: 1px solid #000;
