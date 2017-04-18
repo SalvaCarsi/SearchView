@@ -2,8 +2,10 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 
 import SearchResultsWrapper from '../../components/styled/SearchResultsWrapper';
+import ResultsCounter from './ResultsCounter';
 
 export class SearchResults extends Component {
 
@@ -12,10 +14,9 @@ export class SearchResults extends Component {
   }
 
   render = () => {
-    console.log(this.props.results);
     return (
       <SearchResultsWrapper>
-        Se han encontrado X resultados
+        <ResultsCounter resultsSize={_.isNil(this.props.results.length)?0:this.props.results.length}/>
       </SearchResultsWrapper>
     );
   }
