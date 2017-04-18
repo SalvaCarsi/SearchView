@@ -1,9 +1,10 @@
 'use strict';
 
-function searchBarReducer(state = {results: ''}, action) {
-  console.log(`action type ${action.type}`);
+import constants from '../../constants';
+
+function searchBarReducer(state = {}, action) {
   switch (action.type) {
-    case 'SEARCH_RESPONSE': return action.payload;
+    case constants.actionTypes.SEARCH_QUESTIONS_SUCCESS: return action.payload;
     default: return state;
   }
 }
