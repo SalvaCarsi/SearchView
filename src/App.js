@@ -14,7 +14,7 @@ import BodyWrapper from './components/styled/BodyWrapper';
 function configureStore() {
   const composeEnhancers = composeWithDevTools({
     realtime: true,
-    port: 8000 ,
+    port: 8080 ,
     hostname: 'localhost'
   });
   const appReducers = combineReducers({searchBarReducer});

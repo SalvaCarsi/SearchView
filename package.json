@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node server.js",
-    "remotedev": "remotedev --hostname=localhost --port=8000",
+    "remotedev": "remotedev --hostname=localhost --port=8080",
     "lint": "eslint src"
   },
   "repository": {
