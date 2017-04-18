@@ -2,14 +2,14 @@
 
 import axios from 'axios';
 
-import constants from '../../constants';
+import * as actionTypes from '../../constants/ActionTypes';
 
 export function searchQuestion(text) {
   const request = axios.get(`http://localhost:8000/questions?title=%${text}%&operator=LIKE`);
   return (dispatch) => {
     request.then((response) => {
       dispatch({
-        type: constants.actionTypes.SEARCH_QUESTIONS_SUCCESS,
+        type: actionTypes.SEARCH_QUESTIONS_SUCCESS,
         payload: response.data
       })
     });
