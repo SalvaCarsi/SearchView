@@ -29,17 +29,14 @@ export class SearchBar extends Component {
   render = () => {
     return (
       <SearchBarWrapper>
-        <HeaderTextWrapper
-          size={1.5}
-          fontWeight='bold'
-          padding='0.5em 0.5em'
-          textAlign='center'
-        >
+        <HeaderTextWrapper>
           Buscador de preguntas
         </HeaderTextWrapper>
 
-        <InputWrapper value={this.state.value} onChange={this.handleChange} />
-        <Button onClick={this.handleSubmit}>Buscar</Button>
+        <form action="#" onSubmit={this.handleSubmit}>
+          <InputWrapper value={this.state.value} onChange={this.handleChange} autofocus/>
+          <Button onClick={this.handleSubmit}>Buscar</Button>
+        </form>
 
       </SearchBarWrapper>
     );
