@@ -7,7 +7,7 @@ const SearchBarWrapper = styled.div`
   border-style: solid;
   border-color: #000;
   border-radius: 5px 5px 0px 0px;
-  padding: 1.2em 0.1em;
+  padding: 0.1em 0.1em;
   text-align: center;
   margin: auto 2em;
   background: #FFF;

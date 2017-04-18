@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import TextWrapper from '../../components/styled/TextWrapper';
+import { ListTextWrapper } from '../../components/styled/TextWrapper';
 
 export class SearchResults extends Component {
 
@@ -12,9 +12,9 @@ export class SearchResults extends Component {
 
   render = () => {
     return (
-      <TextWrapper>
+      <ListTextWrapper>
         Se han encontrado {this.props.resultsSize} resultados
-      </TextWrapper>
+      </ListTextWrapper>
     );
   }
 

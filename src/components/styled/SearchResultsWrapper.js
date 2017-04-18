@@ -7,8 +7,7 @@ const SearchResultsWrapper = styled.div`
   border-style: solid;
   border-color: #000;
   border-radius: 0px 0px 5px 5px;
-  padding: 1.2em 0.1em;
-  text-align: center;
+  padding: 1.2em 8em;
   margin: auto 2em;
   background: #FFF;
 `;

@@ -2,11 +2,18 @@
 
 import styled from 'styled-components';
 
-const TextWrapper = styled.div`
-  font-size: ${props => props.size}em;
-  font-weight: ${props => props.fontWeight};
+const HeaderTextWrapper = styled.div`
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0.5em 0.5em;
   text-align: center;
-  padding: ${props => props.padding};
 `;
 
-export default TextWrapper;
+const ListTextWrapper = styled.div`
+  font-size: 0.9em;
+  font-weight: none;
+  padding: 0.5em 0.5em;
+  text-align: left;
+`;
+
+export { HeaderTextWrapper, ListTextWrapper } ;

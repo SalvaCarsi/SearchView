@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import TextWrapper from '../../components/styled/TextWrapper';
+import { ListTextWrapper } from '../../components/styled/TextWrapper';
 
 export class ResultsList extends Component {
 
@@ -12,17 +12,14 @@ export class ResultsList extends Component {
 
   render = () => {
 
-    console.log(this.props.results);
-
     const listItems = this.props.results.map((question) =>
-      <li key={question.id}>
-        <TextWrapper>
+        <ListTextWrapper key={question.id}>
           {question.title}
-        </TextWrapper>
-      </li>);
+        </ListTextWrapper>
+      );
 
     return (
-      <ul>{listItems}</ul>
+      <div>{listItems}</div>
     );
   }
 

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import SearchBarWrapper from '../../components/styled/SearchBarWrapper';
-import TextWrapper from '../../components/styled/TextWrapper';
+import { HeaderTextWrapper } from '../../components/styled/TextWrapper';
 import Button from '../../components/styled/Button';
 import InputWrapper from '../../components/styled/InputWrapper';
 
@@ -29,12 +29,14 @@ export class SearchBar extends Component {
   render = () => {
     return (
       <SearchBarWrapper>
-        <TextWrapper
-          size={1}
-          fontWeight={'bold'}
-          padding={'0.1em 0.1em'}>
+        <HeaderTextWrapper
+          size={1.5}
+          fontWeight='bold'
+          padding='0.5em 0.5em'
+          textAlign='center'
+        >
           Buscador de preguntas
-        </TextWrapper>
+        </HeaderTextWrapper>
 
         <InputWrapper value={this.state.value} onChange={this.handleChange} />
         <Button onClick={this.handleSubmit}>Buscar</Button>
