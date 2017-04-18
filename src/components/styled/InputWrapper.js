@@ -12,6 +12,7 @@ const InputWrapper = styled.input`
   border: 1px solid #000;
   color: #000;
   background: #FFF;
+  padding-left: 0.4em;
 `;
 
 export default InputWrapper;
