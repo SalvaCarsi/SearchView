@@ -1,6 +1,5 @@
 'use strict';
 
-// import Api from '../../Api';
 import axios from 'axios';
 
 export function updateSearchText(text) {

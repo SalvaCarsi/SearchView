@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SalvaCarsi/imersivo"
+    "url": "https://github.com/SalvaCarsi/SearchView"
   },
   "license": "MIT",
   "devDependencies": {
@@ -36,7 +36,6 @@
     "redux": "3.6.0",
     "redux-actions": "1.2.0",
     "redux-thunk": "^2.2.0",
-    "styled-components": "^1.4.3",
-    "whatwg-fetch": "^2.0.3"
+    "styled-components": "^1.4.3"
   }
 }
