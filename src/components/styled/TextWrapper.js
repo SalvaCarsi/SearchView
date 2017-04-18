@@ -2,11 +2,11 @@
 
 import styled from 'styled-components';
 
-const FormWrapper = styled.div`
+const TextWrapper = styled.div`
   font-size: ${props => props.size}em;
   font-weight: ${props => props.fontWeight};
   text-align: center;
   padding: ${props => props.padding};
 `;
 
-export default FormWrapper;
+export default TextWrapper;

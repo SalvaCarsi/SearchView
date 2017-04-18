@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import SearchBarWrapper from '../../components/styled/SearchBarWrapper';
+import SearchResultsWrapper from '../../components/styled/SearchResultsWrapper';
 
 export class SearchResults extends Component {
 
@@ -14,9 +14,9 @@ export class SearchResults extends Component {
   render = () => {
     console.log(this.props.results);
     return (
-      <SearchBarWrapper>
+      <SearchResultsWrapper>
         Se han encontrado X resultados
-      </SearchBarWrapper>
+      </SearchResultsWrapper>
     );
   }
 
