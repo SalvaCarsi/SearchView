@@ -6,6 +6,7 @@ import _ from 'lodash';
 
 import SearchResultsWrapper from '../../components/styled/SearchResultsWrapper';
 import ResultsCounter from './ResultsCounter';
+import ResultsList from './ResultsList';
 
 export class SearchResults extends Component {
 
@@ -13,10 +14,13 @@ export class SearchResults extends Component {
     super(props);
   }
 
+  getResultsSize = () => _.isNil(this.props.results.length)?0:this.props.results.length;
+
   render = () => {
     return (
       <SearchResultsWrapper>
-        <ResultsCounter resultsSize={_.isNil(this.props.results.length)?0:this.props.results.length}/>
+        <ResultsCounter resultsSize={this.getResultsSize()} />
+        {this.getResultsSize() ? <ResultsList results={this.props.results} /> : null }
       </SearchResultsWrapper>
     );
   }
