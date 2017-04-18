@@ -23,7 +23,7 @@ export class SearchBar extends Component {
   };
 
   handleSubmit = () => {
-    this.props.actions.updateSearchText(this.state.searchText);
+    this.props.actions.searchQuestion(this.state.searchText);
   };
 
   render = () => {

@@ -2,8 +2,8 @@
 
 import axios from 'axios';
 
-export function updateSearchText(text) {
-  const request = axios.get('https://jsonplaceholder.typicode.com/users');
+export function searchQuestion(text) {
+  const request = axios.get(`http://localhost:8000/questions?title=%${text}%&operator=LIKE`);
   return (dispatch) => {
     request.then((response) => {
       dispatch({
