@@ -5,11 +5,7 @@ import { connect } from 'react-redux';
 
 import QuestionResultWrapper from '../../components/styled/QuestionResultWrapper';
 import { ResultTextWrapper, HeaderTextWrapper } from '../../components/styled/TextWrapper';
-
-// import SearchBarWrapper from '../../components/styled/SearchBarWrapper';
-// import { HeaderTextWrapper } from '../../components/styled/TextWrapper';
-// import Button from '../../components/styled/Button';
-// import InputWrapper from '../../components/styled/InputWrapper';
+import QuestionAnswers from './QuestionAnswers';
 
 export class QuestionResult extends Component {
 
@@ -26,6 +22,7 @@ export class QuestionResult extends Component {
         <ResultTextWrapper>
           {this.props.questionDetail.title}
         </ResultTextWrapper>
+        <QuestionAnswers />
       </QuestionResultWrapper>
     );
   }

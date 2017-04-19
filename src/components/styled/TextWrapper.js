@@ -18,6 +18,15 @@ const ListTextWrapper = styled.div`
   text-align: left;
 `;
 
+const QuestionAnswreHeadertWrapper = styled.div`
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 0.5em 0.5em;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 3em;
+`;
+
 const ResultTextWrapper = styled.div`
   font-size: 0.9em;
   font-weight: bold;
@@ -34,4 +43,4 @@ const ResultTextWrapper = styled.div`
   background: #E6E6FA;
 `;
 
-export { HeaderTextWrapper, ListTextWrapper, ResultTextWrapper } ;
+export { HeaderTextWrapper, ListTextWrapper, ResultTextWrapper, QuestionAnswreHeadertWrapper } ;
