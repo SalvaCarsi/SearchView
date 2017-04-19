@@ -3,6 +3,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import QuestionResultWrapper from '../../components/styled/QuestionResultWrapper';
+import { ResultTextWrapper, HeaderTextWrapper } from '../../components/styled/TextWrapper';
+
 // import SearchBarWrapper from '../../components/styled/SearchBarWrapper';
 // import { HeaderTextWrapper } from '../../components/styled/TextWrapper';
 // import Button from '../../components/styled/Button';
@@ -16,7 +19,14 @@ export class QuestionResult extends Component {
 
   render = () => {
     return (
-      <h1>{this.props.questionDetail.title}</h1>
+      <QuestionResultWrapper>
+        <HeaderTextWrapper>
+          Buscador de preguntas
+        </HeaderTextWrapper>
+        <ResultTextWrapper>
+          {this.props.questionDetail.title}
+        </ResultTextWrapper>
+      </QuestionResultWrapper>
     );
   }
 
