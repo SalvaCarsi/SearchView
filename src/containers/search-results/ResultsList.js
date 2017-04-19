@@ -11,6 +11,10 @@ export class ResultsList extends Component {
     super(props);
   }
 
+  handleSubmit = (event) => {
+    this.props.fetchQuestion(event.currentTarget.id);
+  };
+
   render = () => {
 
     // TODO For efficiency this should be calculated in the backend, returning the number of answers for each question
@@ -24,7 +28,7 @@ export class ResultsList extends Component {
     );
 
     const listItems = sortedItems.map((question, index) =>
-        <ListTextWrapper key={question.id}>
+        <ListTextWrapper key={question.id} id={question.id} onClick={this.handleSubmit}>
           <ListIndexWrapper>{index+1}</ListIndexWrapper> {question.title}
         </ListTextWrapper>
       );

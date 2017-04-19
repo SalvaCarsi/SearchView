@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 
 import searchBarReducer from './containers/search-bar/reducer';
+import searchResultsReducer from './containers/search-results/reducer';
 import SearchBar from './containers/search-bar/SearchBar';
 import SearchResults from './containers/search-results/SearchResults';
 
@@ -19,7 +20,7 @@ function configureStore() {
     port: 8080 ,
     hostname: 'localhost'
   });
-  const appReducers = combineReducers({searchBarReducer});
+  const appReducers = combineReducers({searchBarReducer, searchResultsReducer});
   return createStore(
     appReducers,
     composeEnhancers(applyMiddleware(thunk))

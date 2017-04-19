@@ -2,11 +2,13 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import _ from 'lodash';
 
 import SearchResultsWrapper from '../../components/styled/SearchResultsWrapper';
 import ResultsCounter from './ResultsCounter';
 import ResultsList from './ResultsList';
+import * as actionsCreator from './actions';
 
 export class SearchResults extends Component {
 
@@ -20,7 +22,8 @@ export class SearchResults extends Component {
     return (
       <SearchResultsWrapper>
         <ResultsCounter resultsSize={this.getResultsSize()} />
-        {this.getResultsSize() ? <ResultsList results={this.props.results} /> : null }
+        {this.getResultsSize() ? <ResultsList results={this.props.results}
+                                              fetchQuestion={this.props.actions.fetchQuestion}/> : null }
       </SearchResultsWrapper>
     );
   }
@@ -29,4 +32,5 @@ export class SearchResults extends Component {
 
 // Container
 const mapStateToProps = state => ({results: state.searchBarReducer});
-export default connect(mapStateToProps)(SearchResults);
+const mapDispatchToProps = dispatch => ({actions: bindActionCreators(actionsCreator, dispatch)});
+export default connect(mapStateToProps, mapDispatchToProps)(SearchResults);
