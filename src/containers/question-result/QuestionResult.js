@@ -24,7 +24,7 @@ export class QuestionResult extends Component {
           {this.props.questionDetail.title}
         </ResultTextWrapper>
         <LinkWrapper><Link to="/" >Volver</Link></LinkWrapper>
-        <QuestionAnswers />
+        <QuestionAnswers answers={this.props.questionDetail.answers}/>
       </QuestionResultWrapper>
     );
   }
