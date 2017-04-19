@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 
 import { ListTextWrapper } from '../../components/styled/TextWrapper';
 import ListIndexWrapper from '../../components/styled/ListIndexWrapper';
@@ -13,6 +14,7 @@ export class ResultsList extends Component {
 
   handleSubmit = (event) => {
     this.props.fetchQuestion(event.currentTarget.id);
+    browserHistory.push('/question');
   };
 
   render = () => {
