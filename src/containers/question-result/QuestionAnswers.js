@@ -28,7 +28,7 @@ export class QuestionAnswers extends Component {
     const answersList = sortedAnswers.map( answer =>
       <ListTextWrapper key={answer.id} >
         <AnswersResultTextWrapper>
-          {answer.text}
+          <div dangerouslySetInnerHTML={{ __html: answer.text }} />
           <NumberOfValidationsWrapper>
             {answer.count_validations} validaciones
           </NumberOfValidationsWrapper>
