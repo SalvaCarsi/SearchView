@@ -1,3 +1,11 @@
+Please notice that I have implemented most of the application from scratch, in particular the form management and the routing is the weakest part of the code as I haven't had the time to investigate good libraries and best practices for them. 
+
+Another point to notice is the organization of the code and the naming of classes and folders. I would like you to see this stage of the code as a draft, meaning this is a starting point in matters of organizing and naming the code and that it needs to evolve in order to improve. 
+
+Other than that I hope you find my code clean. 
+
+Enjoy! :)
+
 ### Geometric app
 
 I have used Dan Abramov react-hot-boilerplate. It is a very minimalistic boilerplate that sets up babel, express, react, slint and hot reloading (I have disable the last feature as it has some issues when developing with Webstorm Idea IDE as it's my case). 
