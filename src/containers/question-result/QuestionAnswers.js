@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 import { QuestionAnswerHeaderWrapper } from '../../components/styled/TextWrapper';
-import { ListTextWrapper } from '../../components/styled/TextWrapper';
+import { ListTextWrapper, AnswersResultTextWrapper, NumberOfValidationsWrapper } from '../../components/styled/TextWrapper';
 
 export class QuestionAnswers extends Component {
 
@@ -27,7 +27,12 @@ export class QuestionAnswers extends Component {
 
     const answersList = sortedAnswers.map( answer =>
       <ListTextWrapper key={answer.id} >
-        {answer.text} {answer.count_validations} validaciones
+        <AnswersResultTextWrapper>
+          {answer.text}
+          <NumberOfValidationsWrapper>
+            {answer.count_validations} validaciones
+          </NumberOfValidationsWrapper>
+        </AnswersResultTextWrapper>
       </ListTextWrapper>
     );
 

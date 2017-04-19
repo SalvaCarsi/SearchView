@@ -39,7 +39,6 @@ const QuestionAnswerHeaderWrapper = styled.div`
 const ResultTextWrapper = styled.div`
   font-size: 0.9em;
   font-weight: bold;
-  font-weight: none;
   padding: 0.5em 0.5em;
   text-align: center;
   border-width: 1px 1px 1px 1px;
@@ -47,9 +46,29 @@ const ResultTextWrapper = styled.div`
   border-color: #000;
   border-radius: 5px 5px 5px 5px;
   padding: 1em 1em;
-  text-align: center;
   margin: auto 8em;
   background: #E6E6FA;
 `;
 
-export { HeaderTextWrapper, ListTextWrapper, ResultTextWrapper, QuestionAnswerHeaderWrapper, LinkWrapper } ;
+const AnswersResultTextWrapper = styled.div`
+  font-size: 0.9em;
+  padding: 0.5em 0.5em;
+  text-align: center;
+  border-width: 1px 0px 1px 0px;
+  border-style: solid;
+  border-color: #CCCCFF;
+  padding: 1em 1em;
+  margin: auto 8em;
+  background: #FFF;
+`;
+
+const NumberOfValidationsWrapper = styled.div`
+  font-size: 0.9em;
+  padding: 0.5em 0.5em;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 1em;
+`;
+
+export { HeaderTextWrapper, ListTextWrapper, ResultTextWrapper, QuestionAnswerHeaderWrapper, LinkWrapper,
+  AnswersResultTextWrapper, NumberOfValidationsWrapper } ;
