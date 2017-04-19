@@ -14,11 +14,20 @@ export class QuestionAnswers extends Component {
 
   renderAnswers = () => {
 
+    // We show nothing in case the store doesn't have the data yet
     if (_.isNil(this.props.answers)) return null;
 
-    const answersList = this.props.answers.map( answer =>
+    const sortedAnswers = this.props.answers.sort(
+      (a, b) => {
+        if (a.count_validations > b.count_validations) return -1;
+        if (a.count_validations < b.count_validations) return 1;
+        return 0;
+      }
+    );
+
+    const answersList = sortedAnswers.map( answer =>
       <ListTextWrapper key={answer.id} >
-        {answer.text}
+        {answer.text} {answer.count_validations} validaciones
       </ListTextWrapper>
     );
 
