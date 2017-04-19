@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'remote-redux-devtools';
 import thunk from 'redux-thunk';
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 
 import searchBarReducer from './containers/search-bar/reducer';
 import SearchBar from './containers/search-bar/SearchBar';
@@ -25,15 +26,16 @@ function configureStore() {
   )
 }
 
+const SearchPage = () => <BodyWrapper><SearchBar/><SearchResults/></BodyWrapper>;
+
 export default class App extends Component {
 
   render = () => {
     return (
       <Provider store={configureStore()}>
-        <BodyWrapper>
-          <SearchBar />
-          <SearchResults />
-        </BodyWrapper>
+        <Router history={hashHistory}>
+          <Route path='/' component={SearchPage} />
+        </Router>
       </Provider>
     );
   }

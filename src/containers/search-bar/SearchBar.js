@@ -33,10 +33,8 @@ export class SearchBar extends Component {
           Buscador de preguntas
         </HeaderTextWrapper>
 
-        <form action="#" onSubmit={this.handleSubmit}>
-          <InputWrapper value={this.state.value} onChange={this.handleChange} autofocus/>
-          <Button onClick={this.handleSubmit}>Buscar</Button>
-        </form>
+        <InputWrapper value={this.state.value} onChange={this.handleChange} />
+        <Button onClick={this.handleSubmit}>Buscar</Button>
 
       </SearchBarWrapper>
     );
