@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import { QuestionAnswreHeadertWrapper } from '../../components/styled/TextWrapper';
+import { QuestionAnswerHeaderWrapper } from '../../components/styled/TextWrapper';
 
 export class QuestionAnswers extends Component {
 
@@ -12,9 +12,9 @@ export class QuestionAnswers extends Component {
 
   render = () => {
     return (
-        <QuestionAnswreHeadertWrapper>
+        <QuestionAnswerHeaderWrapper>
           Respuestas de los entrenadores
-        </QuestionAnswreHeadertWrapper>
+        </QuestionAnswerHeaderWrapper>
     );
   }
 }

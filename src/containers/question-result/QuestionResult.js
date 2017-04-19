@@ -2,9 +2,10 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 import QuestionResultWrapper from '../../components/styled/QuestionResultWrapper';
-import { ResultTextWrapper, HeaderTextWrapper } from '../../components/styled/TextWrapper';
+import { ResultTextWrapper, HeaderTextWrapper, LinkWrapper } from '../../components/styled/TextWrapper';
 import QuestionAnswers from './QuestionAnswers';
 
 export class QuestionResult extends Component {
@@ -22,6 +23,7 @@ export class QuestionResult extends Component {
         <ResultTextWrapper>
           {this.props.questionDetail.title}
         </ResultTextWrapper>
+        <LinkWrapper><Link to="/" >Volver</Link></LinkWrapper>
         <QuestionAnswers />
       </QuestionResultWrapper>
     );
