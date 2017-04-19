@@ -39,5 +39,3 @@ go the instance of chrome where the app is runing and then:
 
 There is a way to do that without so much installation for react Web, but haven't had the chance to investigate it.
 See: https://github.com/zalmoxisus/redux-devtools-extension
-
-There are three git branches, as requested in the task: ```master, React and Bootstrap``` 
